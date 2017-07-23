@@ -9,13 +9,9 @@
 
     const sizeWithUnits = window.getComputedStyle(element).getPropertyValue(property);
     const size = parseInt(sizeWithUnits, 10);
-    console.log(`parent size: ${size}`);
     if (pseudo) {
-      console.log('pseudo:', pseudo);
       const pseudoSizeWithUnits = window.getComputedStyle(element, pseudo).getPropertyValue(property);
-      console.log(pseudoSizeWithUnits);
       const pseudoSize = parseInt(pseudoSizeWithUnits, 10);
-      console.log(`pseudo size: ${pseudoSize}`);
       const rounded = Math.round((pseudoSize / size) * 100);
 
       return `${rounded}%`;

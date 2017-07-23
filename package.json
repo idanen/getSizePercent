@@ -1,0 +1,20 @@
+{
+  "name": "get-size-percent",
+  "version": "1.0.0",
+  "description": "Get an element's width or height in percentage",
+  "main": "getSizePercent.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idanen/getSizePercent.git"
+  },
+  "author": "Idan Entin <idanen@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/idanen/getSizePercent/issues"
+  },
+  "homepage": "https://github.com/idanen/getSizePercent#readme",
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2"
+  }
+}

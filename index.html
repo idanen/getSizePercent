@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test Duda code outside of React</title>
+
+  <link rel="stylesheet" media="all" href="./__test__/mocha.css">
+</head>
+<body>
+  <div id="mocha"></div>
+
+  <script src="./__test__/mocha.min.js"></script>
+  <script src="./__test__/chai.min.js"></script>
+  <script>
+    const expect = chai.expect;
+    mocha.setup('bdd');
+  </script>
+
+  <!-- Source under test -->
+  <script src="./getSizePercent.js"></script>
+
+  <!-- Tests -->
+  <script src="./getSizePercent.test.js"></script>
+
+  <script>
+    mocha.run();
+  </script>
+</body>
+</html>

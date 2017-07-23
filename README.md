@@ -1,7 +1,7 @@
 # getSizePercent
 Get an element's width or height in percentage
 
-##Usage
+## Usage
 ```html
 <style>
 .my-element {

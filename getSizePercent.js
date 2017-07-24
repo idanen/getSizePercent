@@ -7,21 +7,21 @@
 
     const element = document.querySelector(selector.replace(/::?(?:before|after)/, ''));
 
-    const sizeWithUnits = window.getComputedStyle(element).getPropertyValue(property);
-    const size = parseInt(sizeWithUnits, 10);
     if (pseudo) {
+      const origDisplay = element.style.display;
+      element.style.display = 'none';
       const pseudoSizeWithUnits = window.getComputedStyle(element, pseudo).getPropertyValue(property);
-      const pseudoSize = parseInt(pseudoSizeWithUnits, 10);
-      const rounded = Math.round((pseudoSize / size) * 100);
+      element.style.display = origDisplay;
 
-      return `${rounded}%`;
+      return pseudoSizeWithUnits;
     }
 
     const parent = element.parentNode;
-    const parentSizeWithUnits = window.getComputedStyle(parent).getPropertyValue(property);
-    const parentSize = parseInt(parentSizeWithUnits, 10);
-    const rounded = Math.round((size / parentSize) * 100);
+    const parentDisplay = parent.style.display;
+    parent.style.display = 'none';
+    const sizeWithUnits = window.getComputedStyle(element).getPropertyValue(property);
+    parent.style.display = parentDisplay;
 
-    return `${rounded}%`;
+    return sizeWithUnits;
   }
 }(window));

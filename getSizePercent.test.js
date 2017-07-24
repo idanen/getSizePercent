@@ -28,7 +28,7 @@ describe('getSizePercent', () => {
       });
 
       it(`should get element's ${sizeProperty}`, () => {
-        const percentWidth = getSizePercent({ selector: '.parent .target', property: sizeProperty })
+        const percentWidth = getSizePercent({ selector: '.parent .target', property: sizeProperty });
         expect(percentWidth).to.equal(`${expectedPercent}%`);
       });
 
@@ -36,7 +36,7 @@ describe('getSizePercent', () => {
       differentWidths.forEach(parentWidth => {
         it(`should get element's ${sizeProperty} when parent is ${parentWidth}`, () => {
           element.querySelector('.parent').style[sizeProperty] = parentWidth;
-          const percentWidth = getSizePercent({ selector: '.parent .target', property: sizeProperty })
+          const percentWidth = getSizePercent({ selector: '.parent .target', property: sizeProperty });
           expect(percentWidth).to.equal(`${expectedPercent}%`);
         });
       });
@@ -67,7 +67,7 @@ describe('getSizePercent', () => {
         differentWidths.forEach(parentWidth => {
           it(`should get element's ${sizeProperty} when parent is ${parentWidth}`, () => {
             element.querySelector('.target').style[sizeProperty] = parentWidth;
-            const percentWidth = getSizePercent({ selector: '.target::after', property: sizeProperty })
+            const percentWidth = getSizePercent({ selector: '.target::after', property: sizeProperty });
             expect(percentWidth).to.equal(`${expectedPercent}%`);
           });
         });

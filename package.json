@@ -1,6 +1,6 @@
 {
   "name": "get-size-percent",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Get an element's width or height in percentage",
   "main": "./lib/index.js",
   "repository": {

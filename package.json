@@ -1,8 +1,8 @@
 {
   "name": "get-size-percent",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Get an element's width or height in percentage",
-  "main": "getSizePercent.js",
+  "main": "./lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/idanen/getSizePercent.git"
@@ -23,6 +23,5 @@
   "scripts": {
     "build": "babel src --out-dir lib",
     "prepublish": "npm run build"
-  },
-  "main": "./lib/index.js"
+  }
 }
